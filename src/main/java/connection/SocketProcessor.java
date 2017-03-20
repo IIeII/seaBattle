@@ -32,6 +32,7 @@ public class SocketProcessor extends EventDispatcherExt implements Runnable {
     }
 
     public void writeResponse(String s) {
+        Log.debug("writing response");
         String response = "HTTP/1.1 200 OK\r\n" +
                 "Server: VTS\r\n" +
                 "Content-Type: application/json;charset=UTF-8\r\n" +
@@ -39,8 +40,10 @@ public class SocketProcessor extends EventDispatcherExt implements Runnable {
                 "Connection: Keep-Alive\r\n\r\n";
         String result = response + s;
         try {
+            Log.debug("writing response : " + result);
             outputStream.writeUTF(result);
             outputStream.flush();
+            Log.debug("response sended!");
         } catch (IOException e) {
             Log.error("Error occur during SocketProcessor.writeResponse - " + e);
         }

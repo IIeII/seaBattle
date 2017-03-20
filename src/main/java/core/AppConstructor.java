@@ -15,7 +15,7 @@ public class AppConstructor implements IObserverExt {
     }
 
     private void init() {
-
+        Log.debug("Starting application.");
         //init connection
         connectionManager = new ConnectionManager();
         connectionManager.addListener(ConnectionEvent.REQUEST_RECEIVED, this);

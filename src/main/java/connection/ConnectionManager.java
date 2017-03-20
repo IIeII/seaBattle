@@ -26,6 +26,7 @@ public class ConnectionManager extends EventDispatcherExt implements IConnection
 
         listOfSockets = new HashMap<String, SocketProcessor>();
         try {
+            Log.debug("Creating server socket on port - " + PORT_NUMBER);
             serverSocket = new ServerSocket(PORT_NUMBER);
         } catch (IOException e) {
             Log.error("Error occurred during ConnectionManager.init() - " + e);
@@ -36,6 +37,7 @@ public class ConnectionManager extends EventDispatcherExt implements IConnection
         int socketID = 0;
         try {
             while (true) {
+                Log.debug("Ready to accept new client!");
                 Socket socket = serverSocket.accept();
                 Log.debug("Attempt of connection to server accepted, creating new Thread!");
                 String socketName = "socketID_" + socketID;
