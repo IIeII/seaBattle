@@ -26,8 +26,8 @@ public class ConnectionManager extends EventDispatcherExt implements IConnection
 
         listOfSockets = new HashMap<String, SocketProcessor>();
         try {
-            Log.debug("Creating server socket on port - " + PORT_NUMBER);
-            serverSocket = new ServerSocket(PORT_NUMBER);
+            Log.debug("Creating server socket on port - " + System.getenv("PORT"));
+            serverSocket = new ServerSocket(Integer.getInteger(System.getenv("PORT")));
         } catch (IOException e) {
             Log.error("Error occurred during ConnectionManager.init() - " + e);
         }
