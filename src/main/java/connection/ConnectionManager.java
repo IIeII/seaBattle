@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class ConnectionManager extends EventDispatcherExt implements IConnection, IObserverExt {
 
-    private static final int PORT_NUMBER = 8080;
+    private static final int PORT_NUMBER = 9090;
     private ServerSocket serverSocket;
     private Map<String, SocketProcessor> listOfSockets;
 
