@@ -27,7 +27,8 @@ public class SocketProcessor extends EventDispatcherExt implements Runnable {
             Log.debug("Starting handleRequest at SocketProcessor");
             handleRequest();
         } catch (Throwable t) {
-            Log.error("Error occured during SocketProcessor.run()" + t.toString() + "\n" + t.printStackTrace());
+            Log.error("Error occured during SocketProcessor.run()" + t.toString());
+            t.printStackTrace();
         }
     }
 
