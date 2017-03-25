@@ -1,4 +1,4 @@
-package utils.observer;
+package main.java.utils.observer;
 
 public interface IObserverExt {
 

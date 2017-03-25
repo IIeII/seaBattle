@@ -1,8 +1,8 @@
-package connection;
+package main.java.connection;
 
-import utils.Log;
-import utils.observer.EventDispatcherExt;
-import utils.observer.EventExt;
+import main.java.utils.Log;
+import main.java.utils.observer.EventDispatcherExt;
+import main.java.utils.observer.EventExt;
 
 import java.io.*;
 import java.net.Socket;

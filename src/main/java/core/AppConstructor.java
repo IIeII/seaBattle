@@ -1,10 +1,10 @@
-package core;
+package main.java.core;
 
-import connection.ConnectionEvent;
-import connection.ConnectionManager;
-import utils.Log;
-import utils.observer.EventExt;
-import utils.observer.IObserverExt;
+import main.java.connection.ConnectionEvent;
+import main.java.connection.ConnectionManager;
+import main.java.utils.Log;
+import main.java.utils.observer.EventExt;
+import main.java.utils.observer.IObserverExt;
 
 public class AppConstructor implements IObserverExt {
 

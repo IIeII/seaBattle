@@ -1,7 +1,7 @@
-package connection;
+package main.java.connection;
 
-import utils.observer.EventExt;
-import utils.observer.IObserverExt;
+import main.java.utils.observer.EventExt;
+import main.java.utils.observer.IObserverExt;
 
 public interface IConnection {
     void writeResponse(EventExt event, String response) throws Throwable;
